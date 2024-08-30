@@ -14,7 +14,8 @@ jobs:
         with:
           fetch-depth: 0
           lfs: false
+          
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://VishwasB:$HF_TOKEN@huggingface.co/spaces/VishwasB/Search_Engine_llm main
+        run: git push --force https://VishwasB:$HF_TOKEN@huggingface.co/spaces/VishwasB/Search_Engine_llm main
